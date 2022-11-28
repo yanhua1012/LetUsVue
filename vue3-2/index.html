@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hello World</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+    
+</head>
+<body>
+    <div id="app">
+      <!-- 1. 資料綁定與 Class 控制 -->
+      <p v-bind:class="{'is-active': isActive, child: isChild}" class="item">
+        變動的Class
+      </p>
+      <!-- 2. 更新綁定資料與 Class 控制 -->
+      <button v-on:click="isActive=!isActive">切換isActive</button>
+      <!-- 3. 資料綁定與 Style 控制 -->
+      <p v-bind:style="{color: textColor, 'backgroundColor': bgColor}">
+        變動的樣式(Style)
+      </p>
+      <!-- 4. 更新綁定資料與 Style 控制 -->
+      <button v-on:click="changeColor">隨機變更背景顏色</button>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
