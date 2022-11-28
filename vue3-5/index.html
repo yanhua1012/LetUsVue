@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>項目清單的增減</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+</head>
+
+<body>
+  <div id="app">
+    姓名:<input type="text" v-model="name" />
+    年齡:<input type="text" v-model="age" />
+    <button v-on:click="add">新增</button>
+    <br/><br/>
+    <div v-for="(item, index) in list">
+      姓名: {{ item.name }}
+      年齡: {{ item.age }}
+      <button v-on:click="remove(index)">刪除</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>
