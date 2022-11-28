@@ -1,0 +1,12 @@
+.item {
+    padding: 4px 8px;
+    transition: background-color 0.5s;
+}
+
+.child {
+    background-color: #999;
+}
+
+.is-active {
+    background: #eaffcc;
+}
