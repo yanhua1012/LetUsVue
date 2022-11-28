@@ -10,7 +10,20 @@
 </head>
 <body>
     <div id="app">
+        <!-- 1. 文字的綁定-->
         {{ message }}
+        <!-- 2. 迴圈 v-for -->
+        <ul>
+            <li v-for="item in list">{{ item }}</li>
+        </ul>
+        <!-- 3. 事件 v-on -->
+        <button v-on:click="test">按我</button>
+        <!-- 4. 表單輸入 v-model -->
+        <input type="text" v-model="message">
+        <!-- 5. 條件式 v-if -->
+        <ul v-if="isShow">
+            <li v-for="item in list">{{ item }}</li>
+        </ul>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
     <script type="text/javascript" src="./app.js"></script>
