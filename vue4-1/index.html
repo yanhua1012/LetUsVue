@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hello World</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+    
+</head>
+<body>
+    <div id="app">
+    <!-- 單行文字 -->
+    <input type="text" v-model="message">
+
+    <!-- 多行文字 -->
+    <textarea v-model="content"></textarea>
+    
+    <!-- 核取方塊 -->
+    <input type="checkbox" value="A" v-model="checkValue">A
+    <input type="checkbox" value="B" v-model="checkValue">B
+    <input type="checkbox" value="C" v-model="checkValue">C
+    <br/>
+    <!-- 單選圓鈕 -->
+    <input type="radio" value="A" v-model="radioValue">A
+    <input type="radio" value="B" v-model="radioValue">B
+    <input type="radio" value="C" v-model="radioValue">C
+    
+    <!-- 單選選單 -->
+    <select v-model="selectValue">
+      <option value="">請選擇</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>
+    <p>
+      單行文字: {{ message }}
+    </p>
+    <p>
+      多行文字: {{ content }}
+    </p>
+    <p>
+      核取方塊: {{ checkValue }}
+    </p>
+    <p>
+      單選圓鈕: {{ radioValue }}
+    </p>
+    <p>
+      單選選單: {{ selectValue }}
+    </p>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
