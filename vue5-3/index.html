@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>商品總價計算</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+    
+</head>
+<body>
+    <div id="app">
+      <select v-model="selectProduction">
+        <option value="">請選擇</option>
+        <option v-for="item in productions" :value="item.id">{{item.name}}</option>
+      </select>
+      <button @click="buy">購買</button>
+      <br/>
+      購買產品:
+      <ul>
+        <li v-for="item in showList">{{item.name}} - {{item.price}}元</li>
+        <!-- <li v-for="item in buyList">{{item}}</li> -->
+      </ul>
+      <br/>
+      總價:{{totalPrice}}
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
