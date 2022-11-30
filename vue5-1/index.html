@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>自訂義組合變數-computed</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+    
+</head>
+<body>
+    <div id="app">
+      姓:<input type="text" v-model="lastName"><br/>
+      名:<input type="text" v-model="firstName"><br/>
+      郵遞區號:<input type="text" v-model="postNumber"><br/>
+      縣市:<input type="text" v-model="city"><br/>
+      區域:<input type="text" v-model="area"><br/>
+      地址:<input type="text" v-model="address"><br/>
+      <ul>
+        <li>全名:{{fullName}}</li>
+        <li>完整地址:{{fullAddress}}</li>
+      </ul>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
