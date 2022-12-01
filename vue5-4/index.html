@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>資料監聽變化及自動處理 - watch</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./page.css'>
+    
+</head>
+<body>
+    <div id="app">
+      <select v-model="mainId">
+        <option value="">請選擇</option>
+        <option v-for="item in typeList" :value="item.id">{{item.name}}</option>
+      </select>
+      <select v-model="subId">
+        <option value="">請選擇</option>
+        <option v-for="item in currentSubList" :value="item.id">{{item.name}}</option>
+      </select>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
