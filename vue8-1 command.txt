@@ -2,14 +2,12 @@ vue init webpack-simple vue8-1
 
 cd vue8-1
 
-yarn install
-
-
 main.js 為進入點
 
-
-yarn add vuex
+yarn add vuex@3.6.2
 
 yarn add node-sass --dev
+
+yarn install
 
 yarn dev
