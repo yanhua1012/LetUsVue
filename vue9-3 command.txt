@@ -15,3 +15,7 @@ babel presets-env
  支援瀏覽器最新的 2 個版本及 ie > 8.0 的版本
  支援市佔大於 5% 的瀏覽器
  支援 chrome 
+ 
+yarn add babel-preset-env
+
+.\node_modules\.bin\babel src\app.js --out-file src\dist\app.js

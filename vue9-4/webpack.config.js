@@ -1,6 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+var extractPlugin = new ExtractTextPlugin({
+  filename: "bundle.css",
+});
+
 module.exports = {
   entry: './src/app.js',
   output: {
@@ -16,7 +22,44 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.sass$/,
+        use: extractPlugin.extract({
+          use: [
+            //'vue-style-loader',
+            'css-loader',
+            // 'postcss-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: [
+                  require('autoprefixer')({
+                    // browsers: [
+                    //   'Chrome >= 52',
+                    //   'Firefox >= 44',
+                    //   'Safari >= 7',
+                    //   'Explorer > 11',
+                    //   'last 2 Edge versions'
+                    // ]
+                  })
+                ]
+              }
+            },
+            'sass-loader'
+          ],
+        })
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -39,6 +82,9 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    extractPlugin
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',

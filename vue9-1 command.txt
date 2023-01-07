@@ -1,5 +1,5 @@
 vue init webpack-simple vue9-1
-不使用 sass
+不使用 sass 或 安裝 python2.7
 yarn install
 yarn add vuetify@1.5.24
 yarn add vue-router

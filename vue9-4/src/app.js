@@ -3,6 +3,7 @@ import App from '@/App.vue'
 import router from '@/router'
 import store from '@/store/index'
 import 'vuetify/dist/vuetify.min.css'
+import './scss/pages.sass'
 // Vuex
 import Vuetify from 'vuetify'
 
