@@ -1,0 +1,17 @@
+yarn add babel-cli
+
+node .\src\app.js
+
+yarn add babel-preset-es2015
+
+.\node_modules\.bin\babel src\app.js --out-file src\dist\app.js
+
+babel presets-env
+與 latest 的編譯內容類似
+取代了 es2015、es2016、es2017 及 latest
+可自定義瀏覽器環境，僅編譯該瀏覽器缺少的特性
+
+例:
+ 支援瀏覽器最新的 2 個版本及 ie > 8.0 的版本
+ 支援市佔大於 5% 的瀏覽器
+ 支援 chrome 
