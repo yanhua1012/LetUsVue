@@ -44,13 +44,13 @@ module.exports = {
                 ident: 'postcss',
                 plugins: [
                   require('autoprefixer')({
-                    browsers: [
-                      'Chrome >= 52',
-                      'Firefox >= 44',
-                      'Safari >= 7',
-                      'Explorer > 11',
-                      'last 2 Edge versions'
-                    ]
+                    // browsers: [
+                    //   'Chrome >= 52',
+                    //   'Firefox >= 44',
+                    //   'Safari >= 7',
+                    //   'Explorer > 11',
+                    //   'last 2 Edge versions'
+                    // ]
                   })
                 ]
               }
