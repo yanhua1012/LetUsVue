@@ -1,2 +1,7 @@
+
 yarn add postcss-loader autoprefixer extract-text-webpack-plugin
+apt-get install -y build-essential
+nvm install 14
+nvm use 14
+yarn install
 yarn build
