@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>上傳圖片瀏覽</title>
+  </head>
+  <body onload="init();">
+    <!-- <div id="app"></div>
+    <script src="/dist/build.js"></script> -->
+    <div>
+      <input id="file_selector" type="file" onchange="file_viewer.load()">
+    </div>
+    <div>
+      Name:<input id="show_filename" type="text" readonly="true" value="" />
+      Size:<input id="show_filesize" type="text" readonly="true" value="" />
+      <br/>
+      <textarea id="show_data" readonly="true" cols="60" rows="2"></textarea>
+      <br/>
+      <img id="show_image" alt="Show Image" />
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
